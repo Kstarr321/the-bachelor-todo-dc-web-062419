@@ -37,5 +37,24 @@ return arr[0]
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  holding_arr = []
+   
+  ssn = season.to_sym
+  data.each do |szn, szn_arr|
+    if szn == ssn
+      szn_arr.each do |hash|
+        num = hash[:age].to_f
+        
+        holding_arr << num
+
+
+
+
+      end
+    end 
+  end 
+  x = holding_arr.size
+  y = holding_arr.sum
+  return y/x
+
 end
